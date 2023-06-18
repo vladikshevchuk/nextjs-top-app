@@ -2,26 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.visualyHidden {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --black: #3B434E;
+  --gray-dark: #6C7077;
+  --gray: #A4A4A4;
+  --gray-light: #D2D2D2;
+  --white: white;
+  --primary: #7351F5;
+  --primary-hover: #4b2dc1;
+  --red: #FC836D;
+  --red-light: #f89c8b;
+  --green: #1DC37E;
+  --green-light: #C8F8E4;
+  --bg-color: #F5F6F8;
+  --font-family: "Noto Sans",
+    sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+
+  font-family: var(--font-family);
+  color: var(--black);
+  font-weight: 400;
+  background-color: var(--bg-color);
 }

@@ -1,0 +1,21 @@
+.text {
+    margin: 0;
+}
+
+.textS {
+  font-size: 14px;
+  line-height: 24px;
+  /* or 171% */
+}
+
+.textM {
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+}
+
+.textL {
+    font-size: 18px;
+    line-height: 29px;
+    /* or 161% */
+}
