@@ -1,5 +1,4 @@
 import React, { ForwardedRef, forwardRef, useRef, useState } from "react";
-import Image from "next/image";
 import cn from "classnames";
 import { ProductProps } from "./Product.props";
 import styles from "./Product.module.css";
@@ -13,7 +12,7 @@ import { Review } from "../Review/Review";
 import { ReviewForm } from "../ReviewForm/ReviewForm";
 import { motion } from "framer-motion";
 
-const Product = motion(
+export const Product = motion(
   // eslint-disable-next-line react/display-name
   forwardRef(
     (
@@ -41,7 +40,7 @@ const Product = motion(
         <div className={className} ref={ref} {...props}>
           <Card className={styles.product}>
             <div className={styles.logo}>
-              <Image
+              <img
                 src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
                 alt={product.title}
                 width={70}
@@ -153,4 +152,3 @@ const Product = motion(
 );
 
 Product.displayName = 'Product';
-export default Product;
