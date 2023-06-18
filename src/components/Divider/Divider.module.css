@@ -4,6 +4,7 @@
 
   margin: 20px 0;
 
-  border: none;
   background: var(--gray-light);
+
+  border: none;
 }

@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 .visualyHidden {
+  position: absolute;
+
   width: 0;
   height: 0;
   overflow: hidden;
-  position: absolute;
 }
 
 :root {
@@ -31,8 +32,10 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: var(--font-family);
   color: var(--black);
   font-weight: 400;
+
+  font-family: var(--font-family);
+
   background-color: var(--bg-color);
 }

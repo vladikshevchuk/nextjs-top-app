@@ -1,17 +1,17 @@
 .title {
   display: grid;
   grid-template-columns: auto 1fr auto;
+  gap: 20px;
   align-items: baseline;
   justify-items: left;
-  gap: 20px;
 }
 
 .hhTitle {
   display: grid;
   grid-template-columns: auto 1fr;
+  gap: 20px;
   align-items: baseline;
   justify-items: left;
-  gap: 20px;
 }
 
 .seo h1 {
@@ -21,11 +21,12 @@
 }
 
 .seo h2 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+
   font-weight: 500;
   font-size: 22px;
   line-height: 30px;
-  margin-top: 50px;
-  margin-bottom: 25px;
 }
 
 .seo h3 {

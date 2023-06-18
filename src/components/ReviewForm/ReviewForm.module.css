@@ -35,8 +35,10 @@
 
 .panel {
   position: relative;
+
   margin-top: 20px;
   padding: 20px;
+
   border-radius: 5px;
 }
 
@@ -57,8 +59,9 @@
   top: 20px;
   right: 20px;
 
-  border: 0;
   background: none;
+
+  border: 0;
 }
 
 .error .close path {

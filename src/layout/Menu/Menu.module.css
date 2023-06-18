@@ -2,9 +2,9 @@
     display: grid;
     grid-template-columns: 24px 1fr;
     gap: 20px;
+    align-items: center;
     
     margin-top: 20px;
-    align-items: center;
 
     font-weight: 500;
     font-size: 18px;
@@ -24,11 +24,13 @@
 .secondlevel {
     margin-bottom: 10px;
 
-    font-weight: 300;
-    font-size: 12px;
     color: var(--gray-dark);
 
+    font-weight: 300;
+    font-size: 12px;
+
     text-transform: uppercase;
+
     cursor: pointer;
 }
 
@@ -47,11 +49,13 @@
 .thirdLevel {
     display: block;
     margin-bottom: 10px;
-    outline-offset: -1px;
+
+    color: var(--gray-dark);
 
     font-weight: 500;
     font-size: 14px;
-    color: var(--gray-dark);
+
+    outline-offset: -1px;
 
     cursor: pointer;
 }
