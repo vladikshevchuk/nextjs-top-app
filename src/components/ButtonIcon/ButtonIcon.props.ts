@@ -7,7 +7,7 @@ export const icons = {
   up,
   close,
   menu,
-}
+};
 
 export type IconName = keyof typeof icons;
 

@@ -1,15 +1,14 @@
 import React from "react";
-import cn from "classnames";
 import { ReviewProps } from "./Review.props";
 import UserIcon from "./user.svg";
 import styles from "./Review.module.css";
 import { format } from "date-fns";
 import { ru } from "date-fns/locale";
 import { Rating } from "../Rating/Rating";
+import cn from "classnames";
 
 export const Review = ({
   review,
-  children,
   className,
   ...props
 }: ReviewProps): JSX.Element => {
@@ -17,7 +16,7 @@ export const Review = ({
 
   return (
     <div
-      className={styles.review}
+      className={cn(styles.review, className)}
       {...props}
     >
       <UserIcon className={styles.user} />

@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "@types/node": "20.2.5",

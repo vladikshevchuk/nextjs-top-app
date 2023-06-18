@@ -31,6 +31,7 @@ export const Rating = forwardRef(
 
     useEffect(() => {
       constructRaiting(rating);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rating, tabIndex]);
 
     const computeFocus = (r: number, i: number): number => {
@@ -50,6 +51,7 @@ export const Rating = forwardRef(
       const updatedArray = ratingArray.map((r: JSX.Element, i: number) => {
         return (
           <span
+            key={i-1}
             className={cn(styles.star, {
               [styles.filled]: i < currentRating,
               [styles.editable]: isEditable,
@@ -64,8 +66,8 @@ export const Rating = forwardRef(
             aria-invalid={error ? true : false}
             aria-label={isEditable ? 'Укажите рейтинг' : ('рейтинг' + rating)}
             aria-valuenow={rating}
-            aria-valuemax='5'
-            aria-valuemin='1'
+            aria-valuemax={5}
+            aria-valuemin={1}
           >
             <StarIcon />
           </span>
@@ -113,7 +115,7 @@ export const Rating = forwardRef(
 
     return (
       <div
-        className={cn(styles.ratingWrapper, {
+        className={cn(styles.ratingWrapper, className, {
           [styles.error]: error,
         })}
         ref={ref}
@@ -127,3 +129,6 @@ export const Rating = forwardRef(
     );
   }
 );
+
+
+Rating.displayName = 'Rating';

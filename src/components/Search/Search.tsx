@@ -8,7 +8,7 @@ import GlassIcon from './glass.svg';
 import { useRouter } from 'next/router';
 
 export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
-  const [search, setSearch] = useState<string>('')
+  const [search, setSearch] = useState<string>('');
   const router = useRouter();
 
   const goToSearch = () => {
@@ -17,14 +17,14 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
       query: {
         q: search
       }
-    })
+    });
   };
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === 'Enter') {
       goToSearch();
     }
-  }
+  };
 
   return (
     <form className={cn(styles.search, className)} role='search' {...props}>
@@ -44,5 +44,5 @@ export const Search = ({ className, ...props }: SearchProps): JSX.Element => {
         <GlassIcon />
       </Button>
     </form>
-  )
-}
+  );
+};

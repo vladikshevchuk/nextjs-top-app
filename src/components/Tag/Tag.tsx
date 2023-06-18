@@ -22,5 +22,5 @@ export const Tag = ({size = 's', color = 'ghost', href, children, className, ...
           : <>{children}</>
       }
     </div>
-  )
-}
+  );
+};

@@ -11,5 +11,7 @@ export const Textarea = forwardRef(({error, className, ...props}: TextareaProps,
       })} ref={ref} {...props} />
       {error && <span className={styles.errorMessage} role='alert' >{ error.message }</span>}
     </div>
-  )
-})
+  );
+});
+
+Textarea.displayName = 'Textarea';

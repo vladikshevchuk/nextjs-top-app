@@ -1,5 +1,4 @@
 import React from "react";
-import cn from "classnames";
 import { HhDataProps } from "./HhData.props";
 import styles from "./HhData.module.css";
 import RateIcon from "./rate.svg";

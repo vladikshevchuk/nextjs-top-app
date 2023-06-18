@@ -42,13 +42,15 @@ export const ReviewForm = ({
         setIsError("Что-то пошло не так... :(");
       }
     } catch (e) {
-      setIsError(e.message);
+      if (e instanceof Error) {
+        setIsError(e.message);
+      }
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <div className={styles.reviewForm} {...props}>
+      <div className={cn(styles.reviewForm, className)} {...props}>
         <Input
           {...register("name", {
             required: { value: true, message: "Заполните имя" },
@@ -118,7 +120,7 @@ export const ReviewForm = ({
           <button
             className={styles.close}
             onClick={() => setIsSuccess(false)}
-            aria-lable="Закрыть оповещение"
+            aria-label="Закрыть оповещение"
           >
             <CloseIcon />
           </button>
@@ -130,7 +132,7 @@ export const ReviewForm = ({
           <button
             className={styles.close}
             onClick={() => setIsError(undefined)}
-            aria-lable="Закрыть оповещение"
+            aria-label="Закрыть оповещение"
           >
             <CloseIcon />
           </button>

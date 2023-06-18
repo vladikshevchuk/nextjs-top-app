@@ -8,6 +8,7 @@ import { MenuItem } from "../../interfaces/menu.interface";
 
 function Home({menu}: HomeProps): JSX.Element {
   const [rating, setRating] = useState<number>(4);
+  console.log(menu);
 
   return (
     <>
@@ -51,8 +52,8 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
       menu,
       firstCategory,
     }
-  }
-}
+  };
+};
 
 interface HomeProps extends Record<string, unknown> {
   menu: MenuItem[];

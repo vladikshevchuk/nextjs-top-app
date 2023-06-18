@@ -29,7 +29,7 @@ export const sortReduser = (
       return {
         sort: SortEnum.Rating,
         products: action.initialState,
-      }
+      };
 
     default:
       throw new Error("Не верный тип сортировки");

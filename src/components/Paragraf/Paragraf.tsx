@@ -14,5 +14,5 @@ export const Paragraf = ({size = 'm', children, className, ...props}: ParagrafPr
     >
       {children}
     </p>
-  )
-}
+  );
+};

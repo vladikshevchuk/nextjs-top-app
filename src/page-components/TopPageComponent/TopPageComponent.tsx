@@ -24,7 +24,7 @@ export const TopPageComponent = ({
   };
 
   useEffect(() => {
-    dispatchSort({ type: 'reset', initialState: products })
+    dispatchSort({ type: 'reset', initialState: products });
   }, [products]);
 
   return (

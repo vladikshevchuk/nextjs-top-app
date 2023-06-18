@@ -29,7 +29,7 @@ function TopPage({ firstCategory, page, products }: TopPageProps): JSX.Element {
       products={products}
     />
     </>
-  )
+  );
 }
 
 export default withLayout(TopPage);

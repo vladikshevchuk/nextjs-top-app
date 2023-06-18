@@ -2,7 +2,6 @@ import React, { ForwardedRef, forwardRef } from "react";
 import cn from "classnames";
 import { InputProps } from "./Input.props";
 import styles from "./Input.module.css";
-import { spawn } from "child_process";
 
 export const Input = forwardRef(
   (
@@ -23,3 +22,5 @@ export const Input = forwardRef(
     );
   }
 );
+
+Input.displayName = 'Input';
