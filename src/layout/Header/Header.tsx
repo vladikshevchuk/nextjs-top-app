@@ -35,6 +35,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
     <header className={cn(styles.header, className)} {...props}>
       <Logo />
       <ButtonIcon
+        className={styles.menuOpen}
         appearance="white"
         icon="menu"
         onClick={() => setIsOpened(true)}

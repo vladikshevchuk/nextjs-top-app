@@ -39,3 +39,10 @@ body {
 
   background-color: var(--bg-color);
 }
+
+.homePage {
+  height: 100%;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  text-align: center;
+}
